@@ -1,0 +1,38 @@
+/* Header container */
+.footer {
+    position: fixed; /* Sticks the header to the top of the page */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ensures the header spans the full width of the page */
+    background-color: #6e6d6d; /* A dark background color for the header */
+    color: white; /* White text color for contrast */
+    padding: 10px 20px; /* Adds some padding inside the header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for depth */
+    z-index: 1000; /* Keeps the header on top of other elements */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space out items to the left and right */
+    align-items: center; /* Vertically center the items */
+}
+
+/* Menu styling */
+.footer-menu {
+    list-style: none; /* Removes bullet points from the list */
+    display: flex; /* Arranges the items horizontally */
+    margin: 10px; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+}
+
+.footer-menu li {
+    margin-left: 20px; /* Adds space between menu items */
+}
+
+.footer-menu a {
+    text-decoration: none; /* Removes underline from links */
+    color: #333; /* White text color for the links */
+    font-weight: bold; /* Makes the text bold */
+    font-size: 1rem; /* Adjust font size if necessary */
+}
+
+.footer-menu a:hover {
+    color: #fff; /* Changes the color on hover */
+}

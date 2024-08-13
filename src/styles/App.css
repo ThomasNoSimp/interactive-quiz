@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5));
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  overflow: hidden; /* To prevent scroll bars */
+  position: relative; /* Required for positioning pseudo-elements */
+}
+
+.App {
+  text-align: center;
+  margin-top: 3.5%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border-radius: 10px; /* Optional: Rounded corners for glass effect */
+  backdrop-filter: blur(10px); /* Glassy effect */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  position: relative; /* Required for positioning pseudo-elements */
+  overflow: hidden; /* Ensure the stars don’t overflow */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Star field effect */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Prevent interaction with stars */
+  z-index: -1; /* Place stars behind content */
+  overflow: hidden; /* Hide overflow to keep stars in bounds */
+}
+
+.stars::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 1%, transparent 2%);
+  background-size: 2px 2px;
+  animation: moveStars 120s linear infinite; /* Slow-moving stars */
+}
+
+@keyframes moveStars {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(-100%) translateY(-100%);
+  }
+}
