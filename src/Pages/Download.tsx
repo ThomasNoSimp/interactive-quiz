@@ -7,7 +7,7 @@ export const DownloadPage = () => {
             <a href="server/android/app.apk" download className="downloadButton">
                 Download for Android
             </a>
-            <p><b>Note: Android app coming soon! Stay tuned!</b></p>
+            <p><b>Note: iOS app coming soon! Stay tuned!</b></p>
         </div>
     );
 }
