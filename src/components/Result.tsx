@@ -16,7 +16,7 @@ const Result: React.FC<ResultProps> = ({ score, total }) => {
       </p>
       <div className="download-container">
         <button className="downloadButton">
-          <Link className="downloadLinkReact" to="download/ios">Download our application for full features!</Link>
+          <Link className="downloadLinkReact" to="download">Download our application for full features!</Link>
         </button>
       </div>
     </div>
