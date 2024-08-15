@@ -10,7 +10,7 @@ const Footer = () => {
                     <li><Link to="/download">Download App</Link></li>
                     <li><Link to="/donate">Donate</Link></li>
                     <li><Link to="https://github.com/ThomasNoSimp/interactive-quiz">Source Code</Link></li>
-                </ul>˝
+                </ul>
             </nav>
         </footer>
     );
