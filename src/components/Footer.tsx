@@ -9,7 +9,8 @@ const Footer = () => {
                 <ul className="footer-menu">
                     <li><Link to="/download">Download App</Link></li>
                     <li><Link to="/donate">Donate</Link></li>
-                </ul>
+                    <li><Link to="https://github.com/ThomasNoSimp/interactive-quiz">Source Code</Link></li>
+                </ul>˝
             </nav>
         </footer>
     );
