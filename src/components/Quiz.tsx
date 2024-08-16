@@ -8,10 +8,23 @@ const Quiz: React.FC = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
-
+  const [mistakes, setMistakes] = useState<{ question: string; correctAnswer: string; givenAnswer: string }[]>([]);
+  
   const handleAnswer = (answer: string) => {
-    if (questions[currentQuestionIndex].correctAnswer === answer) {
+    const currentQuestion = questions[currentQuestionIndex];
+    
+    if (currentQuestion.correctAnswer === answer) {
       setScore(score + 1);
+    } else {
+      // Add mistake to the mistakes array
+      setMistakes([
+        ...mistakes,
+        {
+          question: currentQuestion.question,
+          correctAnswer: currentQuestion.correctAnswer,
+          givenAnswer: answer
+        }
+      ]);
     }
     
     if (currentQuestionIndex < questions.length - 1) {
@@ -21,10 +34,12 @@ const Quiz: React.FC = () => {
     }
   };
 
+  const totalQuestions = questions.length;
+
   return (
     <div className="quiz-container">
       {showResult ? (
-        <Result score={score} total={questions.length} />
+        <Result score={score} total={totalQuestions} mistakes={mistakes} />
       ) : (
         <Question
           question={questions[currentQuestionIndex].question}
