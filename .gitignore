@@ -24,3 +24,9 @@ yarn-error.log*
 
 # Server
 server/
+
+# Google Verification
+googlef2d86cd395b86daf.html
+
+# Site-Map
+sitemap.xml
