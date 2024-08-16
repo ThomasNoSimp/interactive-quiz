@@ -1,3 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow: /
+Disallow: /private/
+Sitemap: https://interactive-quiz-game-web.vercel.app/sitemap.xml
